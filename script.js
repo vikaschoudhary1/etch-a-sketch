@@ -36,10 +36,18 @@ function createGrid(numberOfDiv) {
     boxes.forEach((box) => {
         box.addEventListener('mouseover', () => {
             box.classList.add('hover');
-            setTimeout(() => {box.classList.remove('hover')}, 500);
+            // setTimeout(() => {box.classList.remove('hover')}, 500);
         })
     })
 }
+
+const resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', () => {
+    document.querySelectorAll('.box').forEach((box) => {
+        box.classList.remove('hover');
+    });
+})
+
 
 function removeGrid() {
     const rows = document.querySelectorAll('.row').forEach((item) => item.remove());
