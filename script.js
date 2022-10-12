@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => { 
+
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
     let userAnswer = prompt('What sized gird would you like? Type a number.');
@@ -42,3 +44,4 @@ function createGrid(numberOfDiv) {
 function removeGrid() {
     const rows = document.querySelectorAll('.row').forEach((item) => item.remove());
 }
+})
