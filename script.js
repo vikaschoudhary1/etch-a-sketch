@@ -35,7 +35,11 @@ function createGrid(numberOfDiv) {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box) => {
         box.addEventListener('mouseover', () => {
-            box.classList.add('hover');
+            const redValue = +randomColorValue();
+            const greenValue = +randomColorValue();
+            const blueValue = +randomColorValue();
+            box.style.background = `#${redValue}${greenValue}${blueValue}`;
+            // box.classList.add('.hover');
             // setTimeout(() => {box.classList.remove('hover')}, 500);
         })
     })
@@ -48,8 +52,14 @@ resetButton.addEventListener('click', () => {
     });
 })
 
+function randomColorValue() {
+    return Math.floor(Math.random() * 255 + 1);
+}
 
 function removeGrid() {
     const rows = document.querySelectorAll('.row').forEach((item) => item.remove());
 }
+
 })
+
+
