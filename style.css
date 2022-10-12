@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#container {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+div.row {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+div.row > div {
+    min-height: 20px;
+    min-width: 20px;
+    border: 1px solid black;
+    flex: 1 1 auto;
+}
+
+.hover {
+    background-color: red;
+}

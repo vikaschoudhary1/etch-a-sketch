@@ -11,23 +11,30 @@
 <body>
     <div id="container"></div>
     <script>
-        let numberOfDiv = 2;
+        let numberOfDiv = 20;
 
         for (let i = 0; i < numberOfDiv; i++){
         const newRow = document.createElement(`div`);
         newRow.className = "row";
         document.querySelector('#container').appendChild(newRow);
         }
-
         
         const DivList = document.querySelectorAll('.row')
         DivList.forEach((div) => {
             for (let i=0; i < numberOfDiv; i++){
             const newDiv = document.createElement('div');
+            newDiv.className = 'box';
             div.appendChild(newDiv);
             }
+        }) 
+
+        const boxes = document.querySelectorAll('.box');
+        boxes.forEach((box) => {
+            box.addEventListener('mouseover', () => {
+                console.log(box);
+                box.classList.add('hover');
+            })
         })
-        
 
     </script>
 </body>
