@@ -38,7 +38,7 @@ function createGrid(numberOfDiv) {
             const redValue = +randomColorValue();
             const greenValue = +randomColorValue();
             const blueValue = +randomColorValue();
-            box.style.background = `#${redValue}${greenValue}${blueValue}`;
+            box.style.background = `rgb(${redValue},${greenValue},${blueValue})`;
             // box.classList.add('.hover');
             // setTimeout(() => {box.classList.remove('hover')}, 500);
         })
@@ -48,7 +48,7 @@ function createGrid(numberOfDiv) {
 const resetButton = document.querySelector('#reset');
 resetButton.addEventListener('click', () => {
     document.querySelectorAll('.box').forEach((box) => {
-        box.classList.remove('hover');
+        box.style.background = null;
     });
 })
 
