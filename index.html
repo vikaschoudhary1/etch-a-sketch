@@ -23,6 +23,7 @@
             } else if (userAnswer > 100){
                 alert('Number too large, please enter a smaller number')
             }
+            removeGrid();
             createGrid(userAnswer);
         })
         
@@ -53,7 +54,9 @@
             })
         }
     
-        
+        function removeGrid() {
+            const rows = document.querySelectorAll('.row').forEach((item) => item.remove());
+        }
 
     </script>
 </body>
