@@ -7,9 +7,13 @@ button.addEventListener('click', () => {
     if (typeof(userAnswer) !== 'number'){
         alert('Please type a valid number')
         return;
+    } else if (userAnswer == null || userAnswer == ''){
+        console.log(userAnswer);
+        return
     } else if (userAnswer > 100){
         alert('Number too large, please enter a smaller number')
     } else if(userAnswer <= 100){
+        console.log(userAnswer)
         removeGrid();
         createGrid(userAnswer);
     }
